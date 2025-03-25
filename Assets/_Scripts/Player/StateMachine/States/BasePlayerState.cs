@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasePlayerState : IState
+public abstract class BasePlayerState : IState
 {
     protected PlayerBrain _brain;
     public BasePlayerState(PlayerBrain brain) {  _brain = brain; }
@@ -12,7 +12,8 @@ public class BasePlayerState : IState
     {
         Debug.Log($"Player Exiting {this} State");
     }
-    public virtual void UpdateState()
+    public virtual void UpdateState(float deltaTime)
     {
+
     }
 }

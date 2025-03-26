@@ -5,6 +5,7 @@ public class PlayerFSM : MonoBehaviour
     protected BasePlayerState _defaultState;
     public PlayerIdleState idleState;
     public PlayerJumpState jumpState;
+    public PlayerDashState dashState;
     public BasePlayerState currentState;
     private PlayerBrain _brain;
     public virtual void Initialize()
@@ -12,6 +13,7 @@ public class PlayerFSM : MonoBehaviour
         _brain = GetComponent<PlayerBrain>();
         idleState = new PlayerIdleState(_brain);
         jumpState = new PlayerJumpState(_brain);
+        dashState = new PlayerDashState(_brain);
         SetUpDefaultState();
         TransitionToState(_defaultState);
     }

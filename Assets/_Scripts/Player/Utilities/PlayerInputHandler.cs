@@ -21,4 +21,10 @@ public class PlayerInputHandler : MonoBehaviour, Controls.IPlayerActions
         if(!context.performed) return;
         _brain.fsm.TransitionToState(_brain.fsm.jumpState);
     }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        _brain.fsm.TransitionToState(_brain.fsm.dashState);
+    }
 }

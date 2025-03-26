@@ -1,9 +1,11 @@
+using Animancer;
 using UnityEngine;
 
 public class PlayerBrain : MonoBehaviour 
 {
     public PlayerFSM fsm;
-
+    public AnimancerComponent animancer;
+    public Animations animations;
     private void OnEnable()
     {
         fsm = GetComponent<PlayerFSM>();
@@ -16,4 +18,9 @@ public class PlayerBrain : MonoBehaviour
     {
         fsm.UpdateState();
     }
+}
+[System.Serializable]
+public class Animations
+{
+    public TransitionAsset playerIdle;
 }

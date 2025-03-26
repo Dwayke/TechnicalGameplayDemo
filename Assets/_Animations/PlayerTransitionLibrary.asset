@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f08fdd50e79d0c4bb235a5c2696516d, type: 3}
+  m_Name: PlayerTransitionLibrary
+  m_EditorClassIdentifier: 
+  _Definition:
+    _Transitions:
+    - {fileID: 4592342209699088207}
+    _Modifiers: []
+    _Aliases: []
+    _AliasAllTransitions: 0
+--- !u!114 &1744716440610514723
+MonoBehaviour:
+  m_ObjectHideFlags: 17
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04d4a67566152e40aaa01b8b745ff6b, type: 3}
+  m_Name: Editor Data
+  m_EditorClassIdentifier: 
+  _Library: {fileID: 11400000}
+  _TransitionSortMode: 0
+--- !u!114 &4592342209699088207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a8877f26e7a6a43aaf06fade1a064a, type: 3}
+  m_Name: PlayerIdle
+  m_EditorClassIdentifier: 
+  _Transition:
+    rid: 8564172542284922956
+  references:
+    version: 2
+    RefIds:
+    - rid: 8564172542284922956
+      type: {class: ClipTransition, ns: Animancer, asm: Kybernetik.Animancer}
+      data:
+        _FadeDuration: 0.25
+        _Speed: 1
+        _Events:
+          _NormalizedTimes: []
+          _Callbacks: []
+          _Names: []
+        _Clip: {fileID: -203655887218126122, guid: 62407cd8228b1234f86ca6f807401d66, type: 3}
+        _NormalizedStartTime: NaN

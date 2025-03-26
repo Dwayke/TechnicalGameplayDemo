@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RenderPipelineSettings:
     supportShadowMask: 0
-    supportSSR: 0
-    supportSSRTransparent: 0
+    supportSSR: 1
+    supportSSRTransparent: 1
     supportSSAO: 1
     supportSSGI: 1
     supportSubsurfaceScattering: 1
@@ -28,10 +28,10 @@ MonoBehaviour:
       m_SchemaId:
         m_Id: With3Levels
     supportVolumetrics: 1
-    supportVolumetricClouds: 0
+    supportVolumetricClouds: 1
     supportLightLayers: 1
     renderingLayerMaskBuffer: 0
-    supportWater: 0
+    supportWater: 1
     waterSimulationResolution: 128
     supportWaterExclusion: 0
     supportWaterDecals: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
     maximumWaterDecalCount: 48
     waterScriptInteractionsMode: 0
     waterFullCPUSimulation: 0
-    supportComputeThickness: 0
+    supportComputeThickness: 1
     computeThicknessResolution: 1
     computeThicknessLayerMask:
       serializedVersion: 2
@@ -64,7 +64,7 @@ MonoBehaviour:
     supportDecalLayers: 0
     supportSurfaceGradient: 0
     decalNormalBufferHP: 0
-    supportHighQualityLineRendering: 0
+    supportHighQualityLineRendering: 1
     highQualityLineRenderingMemoryBudget: 128
     msaaSampleCount: 1
     supportMotionVectors: 1
@@ -72,7 +72,7 @@ MonoBehaviour:
     supportDataDrivenLensFlare: 1
     supportDitheringCrossFade: 1
     supportRuntimeAOVAPI: 0
-    supportTerrainHole: 0
+    supportTerrainHole: 1
     lightProbeSystem: 1
     oldLightProbeSystem: 1
     probeVolumeMemoryBudget: 1024
@@ -82,9 +82,9 @@ MonoBehaviour:
     supportProbeVolumeScenarios: 0
     supportProbeVolumeScenarioBlending: 1
     probeVolumeBlendingMemoryBudget: 128
-    supportRayTracing: 0
+    supportRayTracing: 1
     supportVFXRayTracing: 0
-    supportedRayTracingMode: 3
+    supportedRayTracingMode: 2
     lightLoopSettings:
       cookieAtlasSize: 512
       cookieFormat: 74
@@ -338,7 +338,7 @@ MonoBehaviour:
   availableMaterialQualityLevels: -1
   m_DefaultMaterialQualityLevel: 4
   diffusionProfileSettings: {fileID: 0}
-  m_VolumeProfile: {fileID: 0}
+  m_VolumeProfile: {fileID: 11400000, guid: 8ba92e2dd7f884a0f88b98fa2d235fe7, type: 2}
   virtualTexturingSettings:
     streamingCpuCacheSizeInMegaBytes: 256
     streamingMipPreloadTexturesPerFrame: 0

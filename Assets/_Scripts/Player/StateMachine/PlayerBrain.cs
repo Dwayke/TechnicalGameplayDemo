@@ -3,24 +3,31 @@ using UnityEngine;
 
 public class PlayerBrain : MonoBehaviour 
 {
-    public PlayerFSM fsm;
-    public AnimancerComponent animancer;
-    public Animations animations;
-    private void OnEnable()
+    [field:SerializeField]public PlayerFSM FSM {  get; private set; }
+    [field:SerializeField]public PlayerLocomotion Locomotion { get; private set; }
+    [field:SerializeField]public PlayerInputHandler InputHandler {  get; private set; }
+    [field:SerializeField]public CharacterController CharacterController {  get; private set; }
+    [field:SerializeField]public AnimancerComponent Animancer {  get; private set; }
+    [field:SerializeField]public Animations Animations {  get; private set; }
+   private void OnEnable()
     {
-        fsm = GetComponent<PlayerFSM>();
+        FSM = GetComponent<PlayerFSM>();
+        Locomotion = GetComponent<PlayerLocomotion>();
+        InputHandler = GetComponent<PlayerInputHandler>();
+        CharacterController = GetComponent<CharacterController>();
     }
     private void Start()
     {
-        fsm.Initialize();
+        FSM.Initialize();
     }
     private void Update()
     {
-        fsm.UpdateState();
+        FSM.UpdateState();
     }
 }
 [System.Serializable]
 public class Animations
 {
     public TransitionAsset playerIdle;
+    public TransitionAsset playerRun;
 }

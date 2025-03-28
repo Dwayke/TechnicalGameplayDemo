@@ -10,7 +10,7 @@ public class PlayerDashState : BasePlayerState
     {
         base.EnterState();
         await UniTask.Delay(2000);
-        _brain.fsm.TransitionToState(_brain.fsm.idleState);
+        _brain.FSM.SwitchState(_brain.FSM.idleState);
     }
     public override void UpdateState(float deltaTime)
     {

@@ -4,6 +4,7 @@ public class PlayerFSM : MonoBehaviour
 {
     protected BasePlayerState _defaultState;
     public PlayerIdleState idleState;
+    public PlayerRunState runState;
     public PlayerJumpState jumpState;
     public PlayerDashState dashState;
     public BasePlayerState currentState;
@@ -14,14 +15,15 @@ public class PlayerFSM : MonoBehaviour
         idleState = new PlayerIdleState(_brain);
         jumpState = new PlayerJumpState(_brain);
         dashState = new PlayerDashState(_brain);
+        runState = new PlayerRunState(_brain);
         SetUpDefaultState();
-        TransitionToState(_defaultState);
+        SwitchState(_defaultState);
     }
     public void UpdateState()
     {
         currentState?.UpdateState(Time.deltaTime);
     }
-    public void TransitionToState(BasePlayerState state)
+    public void SwitchState(BasePlayerState state)
     {
         currentState?.ExitState();
         currentState = state;

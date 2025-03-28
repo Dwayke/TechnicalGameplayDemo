@@ -881,7 +881,7 @@ MonoBehaviour:
     m_Value: 1
   shadowResolution:
     m_OverrideState: 1
-    m_Value: 256
+    m_Value: 1024
   shadowDistance:
     m_OverrideState: 1
     m_Value: 8000
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   enabled:
     m_OverrideState: 1
     m_Value: 1
@@ -1109,16 +1109,16 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 15
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 150
   meanFreePath:
     m_OverrideState: 1
     m_Value: 400
   enableVolumetricFog:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   albedo:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -1127,7 +1127,7 @@ MonoBehaviour:
     m_Value: 1
   depthExtent:
     m_OverrideState: 1
-    m_Value: 64
+    m_Value: 0.1
   denoisingMode:
     m_OverrideState: 1
     m_Value: 2
@@ -1151,7 +1151,7 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.75
   m_ResolutionDepthRatio:
     m_OverrideState: 1
     m_Value: 0.5
@@ -2382,7 +2382,7 @@ MonoBehaviour:
     m_Value: 0.001
   extendShadowCulling:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   extendCameraCulling:
     m_OverrideState: 1
     m_Value: 0

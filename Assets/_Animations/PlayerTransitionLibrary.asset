@@ -15,6 +15,7 @@ MonoBehaviour:
   _Definition:
     _Transitions:
     - {fileID: 4592342209699088207}
+    - {fileID: 8888287086022234309}
     _Modifiers: []
     _Aliases: []
     _AliasAllTransitions: 0
@@ -59,4 +60,32 @@ MonoBehaviour:
           _Callbacks: []
           _Names: []
         _Clip: {fileID: -203655887218126122, guid: 62407cd8228b1234f86ca6f807401d66, type: 3}
+        _NormalizedStartTime: NaN
+--- !u!114 &8888287086022234309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a8877f26e7a6a43aaf06fade1a064a, type: 3}
+  m_Name: PlayerRun
+  m_EditorClassIdentifier: 
+  _Transition:
+    rid: 8564172587818549321
+  references:
+    version: 2
+    RefIds:
+    - rid: 8564172587818549321
+      type: {class: ClipTransition, ns: Animancer, asm: Kybernetik.Animancer}
+      data:
+        _FadeDuration: 0.25
+        _Speed: 1
+        _Events:
+          _NormalizedTimes: []
+          _Callbacks: []
+          _Names: []
+        _Clip: {fileID: -203655887218126122, guid: 9fab425a06e6be44eb184ca575dfdb8d, type: 3}
         _NormalizedStartTime: NaN

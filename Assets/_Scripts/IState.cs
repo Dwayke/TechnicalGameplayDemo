@@ -1,6 +1,6 @@
 public interface IState
 {
     void EnterState();
-    void UpdateState();
+    void UpdateState(float deltaTime);
     void ExitState();
 }

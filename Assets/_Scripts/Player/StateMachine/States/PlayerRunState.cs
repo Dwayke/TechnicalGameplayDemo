@@ -24,7 +24,10 @@ public class PlayerRunState : BasePlayerState
         {
             _brain.FSM.SwitchState(_brain.FSM.idleState);
         }
-        _brain.transform.rotation = Quaternion.LookRotation(movement);
+        else
+        {
+            _brain.transform.rotation = Quaternion.LookRotation(movement);
+        }
     }
     public override void ExitState()
     {

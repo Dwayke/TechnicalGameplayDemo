@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,5 +34,11 @@ public class PlayerInputHandler : MonoBehaviour, Controls.IPlayerActions
     {
         MovementValue = context.ReadValue<Vector2>();
         _brain.FSM.SwitchState(_brain.FSM.runState);
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        _brain.FSM.SwitchState(_brain.FSM.attackState);
     }
 }

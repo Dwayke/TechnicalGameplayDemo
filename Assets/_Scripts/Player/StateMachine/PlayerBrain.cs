@@ -30,4 +30,5 @@ public class Animations
 {
     public TransitionAsset playerIdle;
     public TransitionAsset playerRun;
+    public TransitionAsset playerAttack;
 }

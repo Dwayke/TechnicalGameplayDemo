@@ -27,7 +27,7 @@ MonoBehaviour:
           - 1
           _Callbacks: []
           _Names: []
-        _Clip: {fileID: -203655887218126122, guid: 711091af8223e8942a61165f0d442a28, type: 3}
+        _Clip: {fileID: 7400000, guid: 1c6b90ee013c78547bee51d8b048959f, type: 2}
         _NormalizedStartTime: NaN
 --- !u!114 &11400000
 MonoBehaviour:
@@ -89,7 +89,7 @@ MonoBehaviour:
           _NormalizedTimes: []
           _Callbacks: []
           _Names: []
-        _Clip: {fileID: -203655887218126122, guid: 62407cd8228b1234f86ca6f807401d66, type: 3}
+        _Clip: {fileID: 7400000, guid: 53b28b1758e6c264396df22605b96acc, type: 2}
         _NormalizedStartTime: NaN
 --- !u!114 &8888287086022234309
 MonoBehaviour:
@@ -117,5 +117,5 @@ MonoBehaviour:
           _NormalizedTimes: []
           _Callbacks: []
           _Names: []
-        _Clip: {fileID: -203655887218126122, guid: 9fab425a06e6be44eb184ca575dfdb8d, type: 3}
+        _Clip: {fileID: 7400000, guid: 714809dd195c2d74cb3ef0d4fbfdd74c, type: 2}
         _NormalizedStartTime: NaN

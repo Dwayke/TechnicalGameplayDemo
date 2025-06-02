@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Lumin;
 
 public class PlayerRunState : BasePlayerState
 {
@@ -13,12 +14,7 @@ public class PlayerRunState : BasePlayerState
     public override void UpdateState(float deltaTime)
     {
         base.UpdateState(deltaTime);
-        Vector3 movement = new()
-        {
-            x = _brain.InputHandler.MovementValue.x,
-            y = 0,
-            z = _brain.InputHandler.MovementValue.y
-        };
+        Vector3 movement = CalculateMovement();
         _brain.CharacterController.Move(_brain.Locomotion.FreeLookMovementSpeed * deltaTime * movement);
         if (_brain.InputHandler.MovementValue == Vector2.zero)
         {
@@ -32,5 +28,12 @@ public class PlayerRunState : BasePlayerState
     public override void ExitState()
     {
         base.ExitState();
+    }
+
+    private Vector3 CalculateMovement()
+    {
+        Vector3 forward = _brain.MainCameraTransform.forward; forward.y = 0; forward.Normalize();
+        Vector3 right = _brain.MainCameraTransform.right; right.y = 0; right.Normalize();
+        return Vector3.one;
     }
 }

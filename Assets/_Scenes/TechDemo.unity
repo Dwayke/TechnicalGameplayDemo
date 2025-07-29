@@ -154,6 +154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2110996417}
+  - {fileID: 588214031}
   - {fileID: 1661699313}
   - {fileID: 861865149}
   - {fileID: 256964527}
@@ -264,6 +265,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6235169853117665567, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
+      propertyPath: <Combat>k__BackingField
+      value: 
+      objectReference: {fileID: 1470209561}
+    - target: {fileID: 6235169853117665567, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
+      propertyPath: <Animations>k__BackingField.playerAttack.animation
+      value: 
+      objectReference: {fileID: -8471513122087686150, guid: cdb02cc8b8d03db4290d5b0fe79ff0e7, type: 2}
+    - target: {fileID: 6235169853117665567, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
+      propertyPath: <Animations>k__BackingField.playerAttack.useRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235169853117665567, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
+      propertyPath: <Animations>k__BackingField.playerAttack.forwardMomentum
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6467335380809829685, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
       propertyPath: m_Controller
       value: 
@@ -271,8 +288,116 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3087967469028729096, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1470209561}
   m_SourcePrefab: {fileID: 100100000, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
+--- !u!1 &588214030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588214031}
+  - component: {fileID: 588214034}
+  - component: {fileID: 588214033}
+  - component: {fileID: 588214032}
+  m_Layer: 0
+  m_Name: PlayerEffects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &588214031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588214030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 262347332}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &588214032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588214030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa407fb657d91a46a32a38b16b53bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementDustParticles: {fileID: 0}
+  _landingDustParticles: {fileID: 0}
+  _dodgeDustParticles: {fileID: 0}
+  _dustEmissionThreshold: 0.5
+  _attackTrailEffect: {fileID: 0}
+  _heavyAttackImpact: {fileID: 0}
+  _weaponTrailRenderer: {fileID: 0}
+  _playerModel: {fileID: 0}
+  _rotationLagAmount: 0.85
+  _rotationLagSpeed: 8
+  _landingSquashAmount: 0.9
+  _landingSquashDuration: 0.15
+  _playerCamera: {fileID: 0}
+  _cameraShake: {fileID: 0}
+  _lightAttackShake: 0.3
+  _heavyAttackShake: 0.8
+  _dodgeShake: 0.2
+--- !u!114 &588214033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588214030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fe1344331d35c46a7dbc9c0935015f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _magnetismRange: 3
+  _magnetismStrength: 2
+  _enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _enableMagnetism: 1
+--- !u!114 &588214034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588214030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa8e3fc8cb8fb740b9b416fcf6a0fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _footstepAudioSource: {fileID: 0}
+  _grassFootsteps: []
+  _stoneFootsteps: []
+  _metalFootsteps: []
+  _footstepInterval: 0.5
+  _combatAudioSource: {fileID: 0}
+  _attackWhoosh: {fileID: 0}
+  _heavyAttackWhoosh: {fileID: 0}
+  _dodgeWhoosh: {fileID: 0}
+  _landingSound: {fileID: 0}
+  _combatEnterStinger: {fileID: 0}
+  _combatExitStinger: {fileID: 0}
 --- !u!115 &855547849
 MonoScript:
   m_ObjectHideFlags: 0
@@ -517,7 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 1.25, y: 0, z: 0.5}
+  Offset: {x: 1.25, y: 0, z: 0}
   ApplyAfter: 1
   PreserveComposition: 0
 --- !u!114 &861865151
@@ -1301,6 +1426,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1581430666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1470209554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3087967469028729096, guid: e3d65ac2dd0b47f44a5b57f549f1b9c0, type: 3}
+  m_PrefabInstance: {fileID: 360704350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1470209561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470209554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103c09e7c3e1f9741a30b995e0868ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <EnemyLayerMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 0
+  <CombatDetectionRange>k__BackingField: 8
 --- !u!1 &1581430665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +2143,7 @@ Transform:
   m_GameObject: {fileID: 2110996414}
   serializedVersion: 2
   m_LocalRotation: {x: -0.010177436, y: 0.038638715, z: 0.00039355736, w: 0.99920136}
-  m_LocalPosition: {x: 15.206817, y: 2.949106, z: -22.128592}
+  m_LocalPosition: {x: 15.168213, y: 2.9389215, z: -22.626995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
